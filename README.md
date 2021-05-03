@@ -15,7 +15,8 @@ __Outline__ (Duration : 2 hours)
 With this tutorial, you are going to learn on a concrete example how to use a formal method for "serious thing" - that is far more than model, predicate and proof. We will have a look at:
 - the system - a railway level crossing - chosen as anyone knows the subject and because it is complex enough to demonstrate the approach
 - the software - mainly developed formally. The formal notation is introduced when required (it is not a course on B)
-- the physical implementation including sime bits of electronics
+- the physical implementation including some bits of electronics
+
 A level crossing controller is going to be exercised with several boards and different environments to demonstrate how the CLEARSY Safety Platform could be used for safety critical applications.
 ![Level Crossing](https://github.com/CLEARSY/tutorial-ABZ-2021/blob/main/pictures/SS-CS.jpg)
 
