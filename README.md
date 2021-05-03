@@ -1,5 +1,7 @@
 # tutorial-ABZ-2021
 
+![CLEARSY Safety Platform Tutorial](https://github.com/CLEARSY/tutorial-ABZ-2021/blob/main/pictures/SS-tuto.jpg)
+
 __Using B to program the CLEARSY Safety Platform__
 
 This tutorial presents the programming model of the CLEARSY Safety Platform to specify, develop and prove command and control applications with B. A number of examples are exploited to demonstrate how the platform could be used for education, bridging the gap between formal methods and embedded systems / automation.
