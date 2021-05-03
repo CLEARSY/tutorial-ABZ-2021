@@ -11,15 +11,17 @@ This tutorial completes the talk "Programming the CLEARSY Safety Platform" by pr
 __Outline__ (Duration : 2 hours)
 
 A rail crossing controller is going to be exercised with several boards and different environments to demonstrate how the CLEARSY Safety Platform could be used for safety critical applications.
+![Level Crossing](https://github.com/CLEARSY/tutorial-ABZ-2021/blob/main/pictures/SS-CS.jpg)
 
 __Resources__
-- slides, models, and source code hosted at https://github.com/TProver/tutorial-ABZ-2021
-- VirtualBox VM available at : xxxxxxx
+- slides, models, and source code hosted at https://github.com/CLEARSY/tutorial-ABZ-2021
 
 __Requirements__
 - intermediate software development, 
 - comfortable with formal logic. 
 
 __Skills learned__
-- introduction to safety
+- introduction to safety (software, electronics, system)
 - programming a logic controller with B
+
+
