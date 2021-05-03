@@ -10,8 +10,26 @@ This tutorial completes the talk "Programming the CLEARSY Safety Platform" by pr
 
 __Outline__ (Duration : 2 hours)
 
-A rail crossing controller is going to be exercised with several boards and different environments to demonstrate how the CLEARSY Safety Platform could be used for safety critical applications.
+With this tutorial, you are going to learn on a concrete example how to use a formal method for "serious thing" - that is far more than model, predicate and proof. We will have a look at:
+- the system - a railway level crossing - chosen as anyone knows the subject and because it is complex enough to demonstrate the approach
+- the software - mainly developed formally. The formal notation is introduced when required (it is not a course on B)
+- the physical implementation including sime bits of electronics
+A level crossing controller is going to be exercised with several boards and different environments to demonstrate how the CLEARSY Safety Platform could be used for safety critical applications.
 ![Level Crossing](https://github.com/CLEARSY/tutorial-ABZ-2021/blob/main/pictures/SS-CS.jpg)
+
+__Agenda__
+1. Introduction
+   1. Safety, standards & embedded systems
+   2. The railway crossing example
+   3. The CLEARSY Safety Platform in a nutshell
+2. The CLEARSY Safety Platform for education
+   1. The starter kit SK0
+   2. The software simulator (VM)
+   3. Implementing the level crossing controller
+3. The CLEARSY Safety Platform for industry
+   1. The safety core computer CS0
+   2. Implementing the level crossing controller
+3. Conclusion 
 
 __Resources__
 - slides, models, and source code hosted at https://github.com/CLEARSY/tutorial-ABZ-2021
@@ -24,4 +42,8 @@ __Skills learned__
 - introduction to safety (software, electronics, system)
 - programming a logic controller with B
 
-
+__Contributers__
+- Thierry Lecomte: slides, edition, livre presentation
+- Bruno Lavaud: CS0, C code, live presentation
+- Patrick Péronne: SK0, software simulator, level crossing example
+- Lilian Burdy: B models
