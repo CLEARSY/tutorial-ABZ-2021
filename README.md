@@ -10,6 +10,10 @@ The tutorial is given by Thierry LECOMTE. Thierry LECOMTE is R&D Director at CLE
 
 This tutorial completes the talk "Programming the CLEARSY Safety Platform" by providing more practical details on how to use it for education and research. This tutorial was first given during the RSSR 2017 conference (https://conferences.ncl.ac.uk/rssrail/tutorials/#tut2). The tutorial proposed for ABZ 2021 will contain more material based on feedback collected from teachers. It will also present the evolution from the SK0 board, its simulation-based software only version released in 2021 and its industry version, coming with a more open programming model.
 
+__Attending__  
+The tutorial will be run on June 8th 2021 at 2pm-4pm CET, within the framework of the ABZ 2021 international conference (https://abz2021.uni-ulm.de/).  
+It is freely accessible to anyone through the following registration link: https://my.demio.com/ref/XCAMy6daO1HAhmUl  
+
 __Outline__ (Duration : 2 hours)
 
 With this tutorial, you are going to learn on a concrete example how to use a formal method for "serious thing" - that is far more than model, predicate and proof. We will have a look at:
@@ -46,7 +50,7 @@ __Skills learned__
 - programming a logic controller with B
 
 __Contributers__
-- Thierry Lecomte: slides, edition, livre presentation
+- Thierry Lecomte: slides, edition, live presentation
 - Bruno Lavaud: CS0, C code, live presentation
 - Patrick Péronne: SK0, software simulator, level crossing example
 - Lilian Burdy: B models
