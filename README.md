@@ -6,7 +6,9 @@ __Using B to program the CLEARSY Safety Platform__
 
 This tutorial presents the programming model of the CLEARSY Safety Platform to specify, develop and prove command and control applications with B. A number of examples are exploited to demonstrate how the platform could be used for education, bridging the gap between formal methods and embedded systems / automation.
 
-The tutorial is given by Thierry LECOMTE. Thierry LECOMTE is R&D Director at CLEARSY and has been involved in safety and security formal modelling research for decades. He led the LCHIP (Low Cost High Integrity Platform) project during 4 years to build up the CLEARSY Safety Platform.
+The tutorial is given by:
+- Thierry LECOMTE. Thierry is R&D Director at CLEARSY and has been involved in safety and security formal modelling research for decades. He led the LCHIP (Low Cost High Integrity Platform) project during 4 years to build up the CLEARSY Safety Platform.
+- Bruno LAVAUD. Bruno is lead developer at CLEARSY and was heavily involved in the development and certification of the CLEARSY Safety Platform.
 
 This tutorial completes the talk "Programming the CLEARSY Safety Platform" by providing more practical details on how to use it for education and research. This tutorial was first given during the RSSR 2017 conference (https://conferences.ncl.ac.uk/rssrail/tutorials/#tut2). The tutorial proposed for ABZ 2021 will contain more material based on feedback collected from teachers. It will also present the evolution from the SK0 board, its simulation-based software only version released in 2021 and its industry version, coming with a more open programming model.
 
@@ -38,8 +40,9 @@ __Agenda__
    2. Implementing the level crossing controller
 3. Conclusion 
 
-__Resources__
-- slides, models, and source code hosted at https://github.com/CLEARSY/tutorial-ABZ-2021
+__Resources__  
+Slides, models, and source code are hosted at https://github.com/CLEARSY/tutorial-ABZ-2021  
+Most resources will be released after the tutorial, to keep the suspens.
 
 __Requirements__
 - intermediate software development, 
@@ -51,7 +54,7 @@ __Skills learned__
 
 __Contributers__
 - Thierry Lecomte: slides, edition, live presentation
-- Bruno Lavaud: CS0, C code, live presentation
+- Bruno Lavaud: CS0, C code, specific electronics, live presentation
 - Patrick Péronne: SK0, software simulator, level crossing example
 - Lilian Burdy: B models
 
