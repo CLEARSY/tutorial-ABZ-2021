@@ -42,7 +42,7 @@ __Agenda__
 
 __Resources__  
 Slides, models, and source code are hosted at https://github.com/CLEARSY/tutorial-ABZ-2021  
-Most resources will be released after the tutorial, to keep the suspens.
+Most resources will be released after the tutorial, to keep the suspense intact.
 
 __Requirements__
 - intermediate software development, 
