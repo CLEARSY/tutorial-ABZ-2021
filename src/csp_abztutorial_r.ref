@@ -1,0 +1,125 @@
+/*
+This work is licensed under the Creative Commons Attribution 4.0 International License. 
+To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
+*/
+
+REFINEMENT 
+    csp_abztutorial_r
+    
+REFINES 
+    csp_abztutorial
+    
+SEES
+    csp_abztutorial_nrv,
+    csp_abztutorial_cst,
+    csp_abztutorial_register,
+    csp_stdLib_type,
+    csp_stdLib_type_cst,
+    csp_stdLib_arithHelper,
+    csp_stdLib_bitwise,
+    csp_stdLib_addr,
+    csp_cs0Lib
+    
+ABSTRACT_VARIABLES
+    v_lc_watchdogTimeout,
+    v_lc_carCount,
+    v_lc_clock,
+    v_lc_zoneFree,
+    v_lc_inPrev,
+    v_lc_outPrev
+    
+INVARIANT
+    v_lc_watchdogTimeout : uint64_t &
+    v_lc_clock : uint64_t &
+    v_lc_carCount : 0..v_lc_clock +-> INTEGER &
+    dom(v_lc_carCount) /= {} &
+    v_lc_zoneFree : BOOL &
+    v_lc_inPrev : 0..1 &
+    v_lc_outPrev : 0..1 &
+    
+    
+    v_lc_clock <= v_lc_watchdogTimeout &   
+    
+    (v_lc_zoneFree = TRUE
+        => 
+        0 : v_lc_carCount[v_lc_watchdogTimeout-C_lc_watchdogTimeoutPermissive..v_lc_watchdogTimeout])
+    
+ASSERTIONS
+    (v_lc_zoneFree = TRUE
+        => 
+        0 : v_lc_carCount[v_lc_clock-C_lc_watchdogTimeoutPermissive..v_lc_clock])
+    
+    
+INITIALISATION
+    v_lc_watchdogTimeout := C_lc_watchdogTimeoutPermissive ||
+    v_lc_clock := 0 ||
+    v_lc_carCount := {0 |-> 0} ||
+    v_lc_zoneFree := TRUE ||
+    v_lc_inPrev := 0 ||
+    v_lc_outPrev := 0 
+    
+    
+OPERATIONS
+    
+    r_f__lc_treatement(p_clockH, p_clockL, p_inLc, p_outLc) =
+    BEGIN
+        SELECT p_inLc : 0..1 & p_outLc : 0..1
+        THEN
+            ANY n_in, n_out
+            WHERE
+                n_in : 0..1 &
+                (n_in = 1 <=> (p_inLc = 1 & v_lc_inPrev = 0)) &
+                n_out : 0..1 &
+                (n_out = 1 <=> (p_outLc = 1 & v_lc_outPrev = 0))
+            THEN
+                SELECT
+                    v_lc_carCount(max(dom(v_lc_carCount))) + n_in - n_out : -8..8
+                THEN
+                    v_lc_watchdogTimeout :(v_lc_watchdogTimeout : uint64_t 
+                        & v_lc_watchdogTimeout : v_lc_clock..v_lc_clock+C_lc_watchdogTimeoutPermissive) ||
+                    v_lc_carCount(v_lc_clock) := v_lc_carCount(max(dom(v_lc_carCount))) + n_in - n_out ||
+                    v_lc_zoneFree := bool(v_lc_carCount(max(dom(v_lc_carCount))) + n_in - n_out = 0) ||
+                    v_lc_inPrev := p_inLc ||
+                    v_lc_outPrev := p_outLc
+                END
+            END
+        WHEN
+            0=0
+        THEN
+            skip
+        END
+    END;
+    
+    lc_watchdogTimer =
+    BEGIN
+        SELECT
+            v_lc_clock < v_lc_watchdogTimeout 
+        THEN
+            v_lc_clock := v_lc_clock + 1 
+        END
+    END;
+    
+    po <-- r_f__lc_get_freeZone =
+    BEGIN
+        po := Convert_Bool(v_lc_zoneFree)
+    END;
+    
+    p_address, p_value <-- r_f__lc_getSetAddressAndValue =
+    BEGIN
+        p_address := addrUint(LATESET) ||
+        IF v_lc_zoneFree = TRUE 
+            & v_cs0_outputInhibition = SFALSE 
+        THEN
+            p_value := C_lc_outputMask
+        ELSE
+            p_value := 0
+        END
+    END;
+    
+    p_address, p_value <-- r_f__lc_getClearAddressAndValue =
+    BEGIN
+        p_address := addrUint(LATECLR) ||
+        p_value := C_lc_outputMask
+    END
+    
+END
