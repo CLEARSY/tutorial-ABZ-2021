@@ -41,7 +41,7 @@ __Agenda__
 
 __Resources__  
 Slides, models, and source code are hosted at https://github.com/CLEARSY/tutorial-ABZ-2021
-Atelier B CSSP with the software simulator (VM) is available at [Atelier B site](https://www.atelierb.eu/wp-content/uploads/2021/06/CSSP_for_education_20210608.zip). Its installation procedure is available [here](https://github.com/CLEARSY/tutorial-ABZ-2021/blob/main/Atelier%20CLEARSY%20Safety%20Platform/installation_procedure.pdf).  
+Atelier B 24.04 CLEARSY Safety Platform, the installaguide, and the programming hanbook are available at [Atelier B site](https://www.atelierb.eu/en/atelier-b-support-maintenance/download-atelier-b/). 
 
 
 __Requirements__
